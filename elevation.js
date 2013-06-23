@@ -50,7 +50,7 @@
 				success:function(data){
 					var testSuccess=JSON.stringify(data);
 					//console.log(testSuccess);
-					document.write(testSuccess);
+					//document.write(testSuccess);
 					console.log('This function runs!');
 					console.log(data);
 					getElevations(data);
@@ -76,5 +76,9 @@
 				maxi=i;
 			}
 		}//end for
-		//Post to db?
+		//Display to user
+		var eletext = "Your location is "+mylat+" "+mylong+"\n"
+		+"The highest elevation within 2.5 miles is "+max;
+		$("#container").append(eletext);//text(eletext);
+
 	}
