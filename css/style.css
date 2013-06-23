@@ -2,17 +2,28 @@ body {
 font-family: 'Alegreya', serif;
 max-width: 760px;
 margin: auto;
+background-image: url('tsunami_big.png');
+
 }
 
 #container {
 	width: 100%;
 	margin: auto;
 }
-
+#location {
+margin-right: 45px;
+margin-left: 45px;
+text-align: left;
+font-size: 26px;
+}
+#background {
+	background-image: url('tsunami_big.png');
+	height:400px;
+width: 700px;
+}
 .title {
 	background-color: red;
 	border-radius: 20px;
-
 	text-align: center;
 	margin-bottom: 60px;
 }
