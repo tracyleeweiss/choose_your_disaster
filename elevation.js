@@ -4,17 +4,22 @@
 	navigator.geolocation.getCurrentPosition(locationAcquired);
 	var mylat;
 	var mylong;
+	var lat1;
+	var lat2;
+	var longitude1;
+	var longitude2;
+	var boundingBox;
 	function locationAcquired (whatever) {
 	  	mylat = whatever.coords.latitude;
 		mylong = whatever.coords.longitude;
 		//Get current elevation from bing
 
 		//set up bounding box
-		var lat1=mylat-.04;
-		var lat2=mylat+.04;
-		var longitude1=mylong-.04;
-		var longitude2=mylong + .04;
-		var boundingBox=lat1.toPrecision(6)+","+longitude1.toPrecision(6)+","+lat2.toPrecision(6)+","+longitude2.toPrecision(6);
+		lat1=mylat-.04;
+		lat2=mylat+.04;
+		longitude1=mylong-.04;
+		longitude2=mylong + .04;
+		boundingBox=lat1.toPrecision(6)+","+longitude1.toPrecision(6)+","+lat2.toPrecision(6)+","+longitude2.toPrecision(6);
 
 		var ROWS = 10;
 		var COLUMNS=10;
@@ -76,9 +81,13 @@
 				maxi=i;
 			}
 		}//end for
-		//Display to user
-		var eletext = "Your location is "+mylat+" "+mylong+"\n"
-		+"The highest elevation within 2.5 miles is "+max;
-		$("#container").append(eletext);//text(eletext);
+		var diffLocationLat = lat2-lat1;
+		var diffLocationLong = longitude2 - longitude1; 
+		var maxLocationLat=lat1+(diffLocationLat*maxi);
+		var maxLocationLong=longitude1+(diffLocationLong*maxi);
 
+		//Display to user
+		var eletext = max+" at " +maxLocationLat.toPrecision(6)+", "+maxLocationLong.toPrecision(6);
+		 $("#currentLoc").append(mylat.toPrecision(6)+" "+mylong.toPrecision(6));//text(eletext);
+		 $("#highPt").append(eletext);
 	}
