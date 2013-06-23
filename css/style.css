@@ -1,21 +1,25 @@
 body {
-font-family: 'Alef', sans-serif;
+font-family: 'Alegreya', serif;
 max-width: 760px;
+margin: auto;
 }
 
 #container {
-	width: 90%;
+	width: 100%;
 	margin: auto;
 }
 
 .title {
 	background-color: red;
 	border-radius: 20px;
-	margin: 20px;
+
 	text-align: center;
+	margin-bottom: 60px;
 }
 .buttons {
 	text-align: left;
+	padding: 0;
+
 }
 ul {
 	list-style-type: none;
@@ -28,9 +32,11 @@ a {
 
 li {
 	padding: 15px;
-  font-size: 20px;
+  font-size: 40px;
   border:1px solid grey;
   border-radius: 20px;
+  margin-bottom: 15px;
+
 }
 img {
 	margin-right: 50px;
