@@ -1,14 +1,25 @@
 body {
-font-family: 'Alegreya', serif;
-max-width: 760px;
-margin: auto;
-background-image: url('tsunami_big.png');
+	font-family: 'Alegreya', serif;
+	max-width: 760px;
+	min-width: 300px;
+	margin-right: auto;
+	margin-left: auto;
 
 }
+#map-canvas {
+ height: 500px;
+ width: 90%;
+ border: solid 5px black;
+ text-align: center;
+ 	margin-right: auto;
+	margin-left: auto;
 
+}
 #container {
 	width: 100%;
-	margin: auto;
+	margin-right: auto;
+	margin-left: auto;
+
 }
 #location {
 margin-right: 45px;
@@ -16,22 +27,47 @@ margin-left: 45px;
 text-align: left;
 font-size: 26px;
 }
-#background {
-	background-image: url('tsunami_big.png');
-	height:400px;
-width: 700px;
+.circle {
+	height: 40px;
+	width: 40px;
+	margin-top: 10px;
+}
+.instructions { 
+	text-align: center;
+	margin-right: 5px;
+  margin-left: 5px;
 }
 .title {
-	background-color: red;
-	border-radius: 20px;
+	background-color: #EB242C;
+	border-radius: 40px;
 	text-align: center;
 	margin-bottom: 60px;
+	margin-right: 8px;
+	margin-left: 8px;
 }
 .buttons {
 	text-align: left;
 	padding: 0;
-
+	margin-right: 10px;
+  margin-left: 10px;
 }
+.safe {
+	border: solid #199947 1px;
+	background-color: #1EB655;
+	text-align: center;
+	color: white;
+	height: 100px;
+	border-radius: 20px;
+	padding: 0;
+	margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 70px;
+}
+.safe p {
+	font-size: 52px;
+	margin-top: 20px;
+}
+
 ul {
 	list-style-type: none;
 }

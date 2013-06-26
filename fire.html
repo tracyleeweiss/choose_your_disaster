@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Choose Your Disaster: Tsunami</title>
+        <title>Choose Your Disaster : fire</title>
     <link rel="stylesheet" href="./css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
+
      <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&sensor=true"></script>
-     <script src="./js/elevation.js"></script>
+     <script src="./js/fire.js"></script>
   </head>
   <body>
     <div id="container">
       <div class="title">
-        <h1><img class="circle" src="./images/tsunami_50_circ.png"> You Chose: Tsunami</h1>
+        <h1><img class="circle" src="./images/fire_50_circ.png"> You Chose: Fire</h1>
       </div>
-      <div id="background">
-      <div id="location">
-      	<p id='currentLoc'>Your location is:   </p>
-      	<p id="highPt">The nearest high point is:  </p>
-      	<p>Now run to the highest point!</p>
-      </div>
-    </div>
+      <p class="instructions">Now run to the nearest Fire Station!</p>
+      <div id="map-canvas"></div>
     </div>
     <div class="safe">
       <p>I'm Safe</p>
